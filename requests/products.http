@@ -1,0 +1,31 @@
+@api = http://localhost:3000/products HTTP/1.1
+GET {{api}}
+
+### add a product
+POST http://localhost:3000/products
+Content-Type: application/json
+
+    {
+        "name": "SSD 1TB",
+        "description" : "State solid disk",
+        "quantity" : 67
+    }
+
+### get product
+GET http://localhost:3000/products/2
+
+### delete product
+DELETE http://localhost:3000/products/1004
+
+### get total products
+GET http://localhost:3000/products/count
+
+### update
+PUT http://localhost:3000/products/1007
+Content-Type: application/json
+
+{
+    "name": "Mechanical Keyboard",
+    "description": "QWERTY usb keyboard 3.0",
+    "quantity": 150
+}
